@@ -3,7 +3,6 @@ package SA;
 public class Bus extends publicTransport{
     public Bus() {
         passenger = 0;
-        maxPassenger = 30;
         state = false;
         dayCost=0;
         speed=0;
@@ -12,6 +11,7 @@ public class Bus extends publicTransport{
         this.cost = cost;
         this.num = num;
         this.oil = oil;
+        maxPassenger = 30;
     }
     void check() {
         if (!this.state)
