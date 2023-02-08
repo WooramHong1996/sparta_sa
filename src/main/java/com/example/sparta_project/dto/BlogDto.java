@@ -1,17 +1,13 @@
 package com.example.sparta_project.dto;
 
 import com.example.sparta_project.entity.Blog;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Builder
-@Getter
-@NoArgsConstructor
 //이너 dto로 수정(하면서 안에 코드들 다 수정했어요 ㅠㅠ)
 public class BlogDto {
+
     @Getter
     public static class Request{
         private String author;
@@ -19,14 +15,9 @@ public class BlogDto {
         private String title;
         private String password;
 
-        public Request(String author, String contents, String title, String password) {
-            this.author = author;
-            this.contents = contents;
-            this.title = title;
-            this.password = password;
-        }
     }
 
+    @Getter
     public static class Response{
         private Long id;
         private String title;
@@ -45,11 +36,9 @@ public class BlogDto {
         }
     }
 
+    @Getter
+    @AllArgsConstructor
     public static class SendMessage{
         private String message;
-        public void sendMessage(String message)
-        {
-            this.message = message;
-        }
     }
 }
