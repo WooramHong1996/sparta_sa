@@ -25,7 +25,7 @@ public class BlogService {
     // 즉 한 메서드에서 수행되는 여러 작업이 실패할 경우 이전에 수행된 모든 작업이 롤백되어서 원상태로 돌아간다.
     @Transactional(readOnly = true)
 
-    public List<BlogDto.Response> getBlogs() {
+    public List<BlogDto.Response> getBlogs(){
         List <Blog> blogList = blogRepository.findAllByOrderByCreatedAtAsc();
         List <BlogDto.Response> blogResponseDtoList = new ArrayList<>();
         for (Blog blog : blogList) {

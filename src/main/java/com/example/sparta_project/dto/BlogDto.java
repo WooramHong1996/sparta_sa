@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class BlogDto {
     @Getter
-    public static class Request {
+    public static class Request{
         private String author;
         private String contents;
         private String title;
