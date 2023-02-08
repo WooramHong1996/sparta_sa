@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 @Builder
 @Getter
 @NoArgsConstructor
+//이너 dto로 수정(하면서 안에 코드들 다 수정했어요 ㅠㅠ)
 public class BlogDto {
     @Getter
     public static class Request{

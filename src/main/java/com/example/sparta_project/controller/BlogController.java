@@ -1,7 +1,6 @@
 package com.example.sparta_project.controller;
 
 import com.example.sparta_project.dto.BlogDto;
-import com.example.sparta_project.dto.SendMessageDto;
 import com.example.sparta_project.service.BlogService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -47,7 +46,7 @@ public class BlogController {
 
     // 요구사항5. 선택한 게시글 삭제 API (DEL)
     @DeleteMapping("/blogs/{id}")
-    public SendMessageDto deleteBlog(@PathVariable Long id, @RequestBody BlogDto.Request requestDto) {
+    public BlogDto.SendMessage deleteBlog(@PathVariable Long id, @RequestBody BlogDto.Request requestDto) {
         return blogService.deleteBlog(id,requestDto);
     }
 }

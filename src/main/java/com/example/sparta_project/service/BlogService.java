@@ -1,7 +1,6 @@
 package com.example.sparta_project.service;
 
 import com.example.sparta_project.dto.BlogDto;
-import com.example.sparta_project.dto.SendMessageDto;
 import com.example.sparta_project.entity.Blog;
 import com.example.sparta_project.repository.BlogRepository;
 import lombok.RequiredArgsConstructor;
@@ -26,7 +25,7 @@ public class BlogService {
     @Transactional(readOnly = true)
 
     public List<BlogDto.Response> getBlogs(){
-        List <Blog> blogList = blogRepository.findAllByOrderByCreatedAtAsc();
+        List <Blog> blogList = blogRepository.findAllByOrderByCreatedAtDesc();
         List <BlogDto.Response> blogResponseDtoList = new ArrayList<>();
         for (Blog blog : blogList) {
             BlogDto.Response tmp = new BlogDto.Response(blog);
@@ -71,11 +70,11 @@ public class BlogService {
 
     // 요구사항5. 선택한 게시글 삭제
     @Transactional
-    public SendMessageDto deleteBlog(Long id, BlogDto.Request requestDto) {
+    public BlogDto.SendMessage deleteBlog(Long id, BlogDto.Request requestDto) {
         Blog blog = blogRepository.findById(id).orElseThrow(
                 ()-> new IllegalArgumentException("아이디가 존재하지 않습니다.")
         );
-        SendMessageDto sendMessageDto = new SendMessageDto();
+        BlogDto.SendMessage sendMessageDto = new BlogDto.SendMessage();
         if(requestDto.getPassword().equals(blog.getPassword()))
         {
             blogRepository.deleteById(id);

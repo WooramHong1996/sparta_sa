@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface BlogRepository extends JpaRepository<Blog, Long>{
     // 요청사항 : 수정된순이 아니라, 글이 작성된 순으로 정렬바람.
-    List<Blog> findAllByOrderByCreatedAtAsc();
+    List<Blog> findAllByOrderByCreatedAtDesc();
 }

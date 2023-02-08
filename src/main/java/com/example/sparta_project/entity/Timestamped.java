@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 // JPA annotation, entity class 에서 일어나는 특정 이벤트 (entity의 저장, 수정, 삭제)에 대한 리스너를 정의할때 사용
 // 이는 특정 엔티티에 대한 변경이력을 추적하는 기능을 구현한 클래스이다. (엔티티의 생성일자,수정일자를 추적하기위해서 사용)
 @EntityListeners(AuditingEntityListener.class)
-public class Timestamped{
+public class Timestamped {
     @CreatedDate // 테이블의 데이터가 처음 생성된 시각을 기록하는데 사용
     private LocalDateTime createdAt;
 

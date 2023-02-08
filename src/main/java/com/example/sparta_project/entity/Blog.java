@@ -41,6 +41,7 @@ public class Blog extends Timestamped{
         this.password = requestDto.getPassword();
         this.title = requestDto.getTitle();
     }
+    //업데이트 함수
     public void update (BlogDto.Request requestDto)
     {
         this.contents = requestDto.getContents();
