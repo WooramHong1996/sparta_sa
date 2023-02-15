@@ -1,7 +1,7 @@
-package com.example.sparta_project.controller;
+package com.sparta.sparta_project.controller;
 
-import com.example.sparta_project.dto.BlogDto;
-import com.example.sparta_project.service.BlogService;
+import com.sparta.sparta_project.dto.BlogDto;
+import com.sparta.sparta_project.service.BlogService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,8 +1,8 @@
-package com.example.sparta_project.service;
+package com.sparta.sparta_project.service;
 
-import com.example.sparta_project.dto.BlogDto;
-import com.example.sparta_project.entity.Blog;
-import com.example.sparta_project.repository.BlogRepository;
+import com.sparta.sparta_project.dto.BlogDto;
+import com.sparta.sparta_project.entity.Blog;
+import com.sparta.sparta_project.repository.BlogRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,6 +1,6 @@
-package com.example.sparta_project.entity;
+package com.sparta.sparta_project.entity;
 
-import com.example.sparta_project.dto.BlogDto;
+import com.sparta.sparta_project.dto.BlogDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -15,7 +15,7 @@ import javax.persistence.*;
 @Getter // 클래스에 Property에 대한 getter 메서드를 자동으로 생성해주는 것.
 @Entity // Blog라는 클래스가 JPA Entity 클래스로 사용될 것이라는 것, 즉 데이터베이스에 저장할 데이터의 구조를 말한다.
 @NoArgsConstructor // 기본생성자를 자동으로 생성할 수 있게하는 Lombok 에서 사용하는 것.
-public class Blog extends Timestamped{
+public class Blog extends Timestamped {
     @Id  // JPA에서 기본키를 나타내는 필드에 붙인다.
     @GeneratedValue(strategy = GenerationType.AUTO) // JPA에서 자동으로 값을 생성하는 기능을 나타낸다. 주로 PK를 자동으로 생성하기위해 사용.
     // 보통 AUTO, IDENTITY,SEQUENCE, TABLE 방식들이 있다.

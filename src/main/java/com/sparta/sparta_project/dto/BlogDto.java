@@ -1,7 +1,8 @@
-package com.example.sparta_project.dto;
+package com.sparta.sparta_project.dto;
 
-import com.example.sparta_project.entity.Blog;
-import lombok.*;
+import com.sparta.sparta_project.entity.Blog;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 import java.time.LocalDateTime;
 
